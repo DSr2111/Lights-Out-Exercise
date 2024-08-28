@@ -32,13 +32,15 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
 
   /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
   function createBoard() {
-    return Array.from({ length: nrows }).map(
-      (row) => Array.from({ length: ncols }).map
+    return Array.from({ length: nrows }).map((row) =>
+      Array.from({ length: ncols }).map(
+        (cell) => Math.random() < chanceLightStartsOn
+      )
     );
   }
 
   function hasWon() {
-    // TODO: check the board in state to determine whether the player has won.
+    return board.every((row) => row.every((cell) => !cell));
   }
 
   function flipCellsAround(coord) {
