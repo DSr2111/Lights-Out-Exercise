@@ -74,7 +74,14 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
   }
   // make table board
 
-  // TODO
+  let tblBoard = [];
+
+  for (let y = 0; y < nrows; y++) {
+    let row = [];
+    for (let x = 0; x < ncols; x++) {
+      let coord = `${y} - ${x}`;
+    }
+  }
 }
 
 export default Board;
