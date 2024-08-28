@@ -55,6 +55,7 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
         }
       };
 
+      const boardCopy = oldBoard.map((row) => [...row]);
       // TODO: Make a (deep) copy of the oldBoard
 
       // TODO: in the copy, flip this cell and the cells around it
