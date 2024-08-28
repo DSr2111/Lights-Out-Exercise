@@ -88,7 +88,13 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
         />
       );
     }
+    tblBoard.push(<tr key={y}>{row}</tr>);
   }
+  return (
+    <table className="Board">
+      <tbody>{tblBoard}</tbody>
+    </table>
+  );
 }
 
 export default Board;
