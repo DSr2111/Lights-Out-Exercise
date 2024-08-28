@@ -80,6 +80,13 @@ function Board({ nrows, ncols, chanceLightStartsOn }) {
     let row = [];
     for (let x = 0; x < ncols; x++) {
       let coord = `${y} - ${x}`;
+      row.push(
+        <Cell
+          key={coord}
+          isLit={board[y][x]}
+          flipCellsAroundMe={(evt) => flipCellsAround(coord)}
+        />
+      );
     }
   }
 }
